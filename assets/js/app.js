@@ -49,9 +49,11 @@ console.log(convertDoubleSpaceToSingle("MESSI  IS  THE  GREATEST  PLAYER  EVER")
 //  superior a 3 caracteres, Y, la contraseña tiene al
 //   menos 8 caracteres de longitud. De lo contrario, 
 //   devuelve false.
-
 function areValidCredentials(name, password) {
-    if (name.length > 3 && password.length > 8) {
-        
+    if(name.length > 3 && password.length > 8 ){
+      return true;
+    }else {
+       return false;
     }
-}
+  }
+ console.log(areValidCredentials('Ritu', 'mylongpassword')) 
