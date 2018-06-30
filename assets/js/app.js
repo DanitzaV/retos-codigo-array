@@ -83,3 +83,29 @@ function areValidCredentials(name, password) {
     }
 
 console.log(filterOddElements([1, 2, 3, 4, 5]));
+// -------------------------------
+
+// Dado un array, "findShortestWordAmongMixedElements"
+//  devuelve la cadena más corta dentro del array dado.
+// falta poner "" para numeros
+
+function findShortestWordAmongMixedElements(arr) {
+    // your code here
+      let candena = []
+    for(let i = 0; i < arr.length ; i++){
+      if(typeof arr[i] == 'string'){
+        candena.push(arr[i])
+      }
+    }
+    if(arr.length === 0){
+      return ""
+    }
+    
+   let menor = candena.sort(function(a, b) {
+       return  a.length - b.length
+        
+  })
+  return menor[0]
+   
+  }
+  console.log(findShortestWordAmongMixedElements([4, 'two', 2, 'three']))
