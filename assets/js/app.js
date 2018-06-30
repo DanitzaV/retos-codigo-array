@@ -57,3 +57,29 @@ function areValidCredentials(name, password) {
     }
   }
  console.log(areValidCredentials('Ritu', 'mylongpassword')) 
+// ------------------------------
+// Dada una lista de números enteros no negativos y una suma objetivo,
+// encuentre un par de números que sumen a la suma objetivo.
+
+ function findPairForSum(array, number) {
+    for(let i = 0; i <array.length; i++){
+     for(let j = 0 ; j < array.length; j++){
+       if(array[i]+ array[j] == number){
+         return [array[i],array[j]];
+       }
+     }
+   }
+  }
+  console.log(findPairForSum([3, 34, 4, 12, 5, 2], 9));
+//   ------------------------------
+// Dado un array de números,"filterOddElements" devuelve
+//  un array que contiene sólo los números impares del array dado.
+
+  function filterOddElements(arr) {
+
+    var  impar = arr.filter(e => e % 2 === 1);
+        
+    return impar
+    }
+
+console.log(filterOddElements([1, 2, 3, 4, 5]));
